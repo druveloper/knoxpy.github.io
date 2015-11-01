@@ -1,0 +1,28 @@
+/* Override Bootstrap Styles */
+
+.col-md-12 {
+    float: none;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.jumbotron {    
+    background-color: rgb(45,137,232);
+    color: white;
+    letter-spacing: 1px;
+    /*margin-bottom: 5px;*/
+}
+
+/* My Styles */
+
+dl, li, p {
+    font-size: 12pt;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+.banner-link {
+    color: white;
+}
