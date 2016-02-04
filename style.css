@@ -7,10 +7,9 @@
 }
 
 .jumbotron {    
-    background-color: rgb(45,137,232);
+    background-color: rgb(17,108,214);
     color: white;
     letter-spacing: 1px;
-    /*margin-bottom: 5px;*/
 }
 
 /* My Styles */
@@ -25,4 +24,29 @@ h1, h2, h3, h4 {
 
 .banner-link {
     color: white;
+}
+
+a.banner-icon {
+    text-decoration: none;
+}
+
+a.banner-icon:hover {
+    color: gray;
+}
+
+.month {
+    background-color: rgb(17,108,214);
+    color: white;
+    letter-spacing: 1px;
+    padding: 6px;
+    /*margin-top: 0;*/
+}
+
+#footer {
+    color: white;
+    display: inline-block;
+    font-size: small;
+    height: 38px;
+    line-height: 45px;
+    vertical-align: middle;
 }
