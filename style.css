@@ -1,4 +1,5 @@
-/* Override Bootstrap Styles */
+/* Override Bootstrap Styles
+------------------------------------------------- */
 
 .col-md-12 {
     float: none;
@@ -6,16 +7,21 @@
     max-width: 700px;
 }
 
-.jumbotron {    
+.jumbotron {
     background-color: rgb(17,108,214);
     color: white;
     letter-spacing: 1px;
 }
 
-/* My Styles */
+/* Styles
+------------------------------------------------- */
+
+a {
+    font-weight: bold;
+}
 
 dl, li, p {
-    font-size: 12pt;
+    font-size: 1.2em;
 }
 
 h1, h2, h3, h4 {
@@ -24,14 +30,7 @@ h1, h2, h3, h4 {
 
 .banner-link {
     color: white;
-}
-
-a.banner-icon {
     text-decoration: none;
-}
-
-a.banner-icon:hover {
-    color: gray;
 }
 
 .month {
