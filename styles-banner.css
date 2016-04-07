@@ -1,0 +1,37 @@
+/* Styles for Banner
+---------------------------------------------- */
+
+body {
+    background-color: rgb(18, 108, 215);
+    color: white;
+    letter-spacing: 1px;
+}
+
+.container {
+    /*background-color: red;*/
+    /*width: 100%;*/
+}
+
+h1 {
+    font-size: 38pt;
+}
+
+h2 {
+    font-size: 28pt;
+}
+
+i {
+    vertical-align: middle;
+}
+
+#logo {
+    height: 256px;
+    width: 256px;
+}
+
+.vertical-align {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
