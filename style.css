@@ -1,9 +1,7 @@
 /* Override Bootstrap Styles
 ------------------------------------------------- */
 
-.container {
-    max-width: 700px;
-}
+.container { max-width: 700px; }
 
 .jumbotron {
     background-color: rgb(17,108,214);
@@ -15,9 +13,9 @@
 /* Styles
 ------------------------------------------------- */
 
-p {
-    font-size: 1.1em;
-}
+h2 { margin-top: 40px; }
+
+p { font-size: 1.1em; }
 
 ul {
     font-size: 1.1em;
@@ -26,10 +24,11 @@ ul {
 }
 
 #footer {
+    background-color: rgb(17,108,214);
     color: white;
-    display: inline-block;
-    font-size: small;
-    height: 38px;
-    line-height: 45px;
-    vertical-align: middle;
+    font-size: 0.8em;
+    height: 80px;
+    margin-top: 40px;
+    padding-top: 29px;
+    text-align: center;
 }
