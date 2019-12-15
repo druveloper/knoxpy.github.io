@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KnoxPy</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md">
-        <h1>KnoxPy 🐍 💻</h1>
+        <h1>KnoxPy 💻 🐍</h1>
         <p class="lead">Python users group in Knoxville, TN</p>
       </div>
     </div>
@@ -45,10 +47,6 @@
       </p>
 
       <p>
-        <a href="http://www.meetup.com/knoxpy"><strong>Meetup</strong></a> - Join us on Meetup for upcoming events and to view our past events.
-      </p>
-
-      <p>
         <a href="https://twitter.com/knoxpytn"><strong>Twitter</strong></a> - Follow us on Twitter for announcements and group discussion.
       </p>
 
@@ -57,7 +55,7 @@
       </p>
 
       <p>
-        <a href="https://github.com/knoxpy"><strong>GitHub</strong></a> - This website is hosted on the KnoxPy GitHub.
+        <a href="https://github.com/knoxpy"><strong>GitHub</strong></a> - Code, presentations, and this website are available on our GitHub.
       </p>
 
       <p>
@@ -65,18 +63,49 @@
       </p>
 
       <p>
-        The Technology Cooperative is located at 127 West Jackson Avenue, Unit 103, Knoxville, TN 37902 next to Awaken Coffee. The nearest free parking is located across the street from Sweet P's BBQ. There is currently road construction in the area so please refer to the map below for parking.
+        The Technology Cooperative is located at 127 West Jackson Avenue, Unit 103, Knoxville, TN 37902 next to Awaken Coffee. The nearest free parking is located across the street from Sweet P's BBQ. <strong>There is currently road construction in the area so please refer to the map below for parking.</strong>
       </p>
+
       <img src="https://www.downtownknoxville.org/lib/file/manager/DKA_construction_2019_v5.jpg" class="img-fluid">
 
+      {% capture now %}{{ 'now' | date: '%s' | plus: 0 }}{% endcapture %}
+      {% assign counter = 0 %}
+
+      {% for post in site.posts %}
+        {% capture date %}{{ post.date | date: '%s' | plus: 0 }}{% endcapture %}
+        {% if date > now %}
+          <h2>Upcoming events</h2>
+          <hr>
+          <h4>{{ post.title }}</h4>
+          <h6>{{ post.date | date: '%B %-d, %Y' }} from {{ post.time }}</h6>
+          <h6>{{ post.address }}</h6>
+          {{ post.content }}
+        {% else %}
+          {% if counter == 0 %}
+            <h2 id="past-events">Past events</h2>
+            <hr>
+            <ul id="ul-nobullet">
+            {% assign counter = 1 %}
+          {% endif %}
+          {% assign year = post.date | date: "%Y" %}
+          {% if year != prev_year %}
+              <h5 style="margin-top: 10px;">{{ year }}</h5>
+              {% assign prev_year = year %}
+          {% endif %}
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+            </ul>
+
       <h2>Resources</h2>
+      <hr>
       <p>Resources related to the Python programming language are provided below. Links are organized by category such as 📚 books, 🎒 conferences, 🎓 courses, 💻 text editors and IDEs, 🔈 podcasts, 📈 visualization tools, and 🐍 other Python sites.</p>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md">
-      <ul>
+      <ul id="ul-nobullet">
         <li>📚 <a href="http://physics.codes">Effective Computation in Physics</a></li>
         <li>📚 <a href="https://www.amazon.com/Elegant-SciPy-Art-Scientific-Python/dp/1491922877">Elegant SciPy</a></li>
         <li>📚 <a href="https://flaskbook.com">Flask Web Development</a></li>
@@ -84,7 +113,7 @@
         <li>📚 <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python for Data Science Handbook</a></li>
         <li>📚 <a href="https://www.twoscoopspress.com">Two Scoops of Django</a></li>
       </ul>
-      <ul>
+      <ul id="ul-nobullet">
         <li>🎒 <a href="https://djangocon.us">DjangoCon</a></li>
         <li>🎒 <a href="https://pycascades.com">PyCascades</a></li>
         <li>🎒 <a href="https://us.pycon.org">PyCon</a></li>
@@ -92,7 +121,7 @@
         <li>🎒 <a href="https://www.pytennessee.org">PyTennessee</a></li>
         <li>🎒 <a href="https://www.scipy2019.scipy.org">SciPy</a></li>
       </ul>
-      <ul>
+      <ul id="ul-nobullet">
         <li>🎓 <a href="https://www.codecademy.com/learn/learn-python-3">Learn Python 3</a></li>
         <li>🎓 <a href="https://www.edx.org/course/introduction-to-computer-science-and-programming-using-python-2">Introduction to Computer Science and Programming Using Python</a></li>
         <li>🎓 <a href="https://www.learnpython.org">Learn Python</a></li>
@@ -100,23 +129,23 @@
       </ul>
     </div>
     <div class="col-md">
-      <ul>
+      <ul id="ul-nobullet">
         <li>💻 <a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
         <li>💻 <a href="https://www.spyder-ide.org">Spyder</a></li>
         <li>💻 <a href="https://www.sublimetext.com">Sublime Text</a></li>
         <li>💻 <a href="https://code.visualstudio.com">Visual Studio Code</a></li>
       </ul>
-      <ul>
+      <ul id="ul-nobullet">
         <li>🔈 <a href="https://pythonbytes.fm">Python Bytes</a></li>
         <li>🔈 <a href="https://talkpython.fm/home">Talk Python to Me</a></li>
       </ul>
-      <ul>
+      <ul id="ul-nobullet">
         <li>📈 <a href="https://bokeh.pydata.org">Bokeh</a></li>
         <li>📈 <a href="https://matplotlib.org">Matplotlib</a></li>
         <li>📈 <a href="https://docs.enthought.com/mayavi/mayavi/">Mayavi</a></li>
         <li>📈 <a href="https://plot.ly">Plotly</a></li>
       </ul>
-      <ul>
+      <ul id="ul-nobullet">
         <li>🐍 <a href="https://www.anaconda.com">Anaconda</a></li>
         <li>🐍 <a href="https://www.enthought.com/product/canopy/">Enthought Canopy</a></li>
         <li>🐍 <a href="https://numfocus.org">NumFOCUS</a></li>
@@ -133,7 +162,10 @@
 <div class="container-fluid" id="footer">
   <div class="row">
     <div class="col-md">
-      <p>KnoxPy since 2015</p>
+      <p>
+        KnoxPy since 2015 <br>
+        This site is generated with <a href="https://jekyllrb.com">Jekyll</a> and hosted on <a href="https://pages.github.com/">GitHub Pages</a>
+      </p>
     </div>
   </div>
 </div>  <!-- end Footer -->
