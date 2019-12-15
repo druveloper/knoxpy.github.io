@@ -17,7 +17,9 @@ time: 6:30-8:30pm
 address: Technology Cooperative, 127 West Jackson Ave, Unit 103, Knoxville, TN
 ---
 
-This is a description of my awesome talk, discussion, or demo for KnoxPy. Since this is Markdown, all the typical Markdown syntax is supported. Can't wait to give a presentation!
+This is a description of my awesome talk, discussion, or demo for KnoxPy.
+Since this is Markdown, all the typical Markdown syntax is supported. Can't
+wait to give a presentation!
 ```
 
 If you would like to give a presentation or lead a discussion/demo for an upcoming meeting, follow the instructions given below to submit your talk.
