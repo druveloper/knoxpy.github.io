@@ -68,14 +68,16 @@
 
       <img src="https://www.downtownknoxville.org/lib/file/manager/DKA_construction_2019_v5.jpg" class="img-fluid">
 
+      <h2>Upcoming events</h2>
+      <hr>
+      <p>Want to give a presentation, lead a discussion, or demo some code? See the <a href="https://github.com/knoxpy/knoxpy.github.io#submit-a-talk">Submit a talk</a> guidelines on our GitHub repository for more information.</p>
+
       {% capture now %}{{ 'now' | date: '%s' | plus: 0 }}{% endcapture %}
       {% assign counter = 0 %}
 
       {% for post in site.posts %}
         {% capture date %}{{ post.date | date: '%s' | plus: 0 }}{% endcapture %}
         {% if date > now %}
-          <h2>Upcoming events</h2>
-          <hr>
           <h4>{{ post.title }}</h4>
           <h6>{{ post.date | date: '%B %-d, %Y' }} from {{ post.time }}</h6>
           <h6>{{ post.address }}</h6>
