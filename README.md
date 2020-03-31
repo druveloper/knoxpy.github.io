@@ -66,8 +66,8 @@ If you would like to give a presentation or lead a discussion/demo for an upcomi
 1. Fork this repository (the remote for your version will be under your account, not `knoxpy`)
 2. Add a Markdown file to the `_posts` directory which contains the title, time, address, and description of your talk
 3. Use the template shown above for your Markdown file
-4. Commit and push your changes to your copy of the repo on Github
-5. Create a Pull Request to submit your talk to the KnoxPy website. Github should guide you to make this step simple.
+4. Commit and push your changes to your forked copy of the repo on GitHub
+5. Create a Pull Request to submit your talk to the KnoxPy website. GitHub should guide you to make this step simple.
 
 ## Follow us
 
