@@ -1,0 +1,7 @@
+# Required field = name
+# Optional fields = github, twitter, website
+
+- name: Gavin Wiggins
+  github: https://github.com/wigging
+  twitter: https://twitter.com/wigging
+  website: https://gavinw.me

@@ -69,6 +69,10 @@ If you would like to give a presentation or lead a discussion/demo for an upcomi
 4. Commit and push your changes to your forked copy of the repo on GitHub
 5. Create a Pull Request to submit your talk to the KnoxPy website. GitHub should guide you to make this step simple.
 
+## Become a member
+
+Show your support for KnoxPy by listing yourself as a member on our website. To be listed as a member, just add your name and other information to the `_data/members.yml` file. This can be done via Pull Request or submitted as an Issue.
+
 ## Follow us
 
 :bird: **[Twitter](https://twitter.com/knoxpytn)**

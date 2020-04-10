@@ -161,6 +161,28 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md">
+      <h2>Members</h2>
+      <hr>
+
+      {% for member in site.data.members%}
+      <p>
+        {{ member.name }} &nbsp;
+        {% if member.github %}
+        <a href="{{ member.github }}">[GitHub]</a> &nbsp;
+        {% endif %}
+        {% if member.twitter %}
+        <a href="{{ member.twitter }}">[Twitter]</a> &nbsp;
+        {% endif %}
+        {% if member.website %}
+        <a href="{{ member.website }}">[Website]</a> &nbsp;
+        {% endif %}
+      </p>
+      {% endfor %}
+    </div>
+  </div>
+
 </div>  <!-- end Main Content -->
 
 <!-- Footer -->
@@ -174,8 +196,6 @@
     </div>
   </div>
 </div>  <!-- end Footer -->
-
-<script data-goatcounter="https://knoxpy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
