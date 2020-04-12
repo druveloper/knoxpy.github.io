@@ -167,30 +167,43 @@
     <div class="col-md">
       <h2>Members</h2>
       <hr>
+
+      <p>Show your support for KnoxPy by listing your name in the Members section. Instructions for submitting your info is on our <a href="https://github.com/knoxpy/knoxpy.github.io">GitHub</a> page.</p>
     </div>
   </div>
 
-  <div class="row row-cols-sm-2">
+  <div class="row row-cols-sm-3">
 
+    {% assign counter = 0 %}
     {% for member in site.data.members %}
-    <div class="col mb-4">
+    <div class="col mb-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{ member.name }}</h5>
           {% if member.github %}
-          <a href="{{ member.github }}" class="card-link"><img src="github.svg" height="20"></a>
+          <!-- <a href="{{ member.github }}" class="card-link"><img src="github.svg" height="20"></a> -->
+          <a href="{{ member.github }}">GitHub</a><br>
           {% endif %}
           {% if member.twitter %}
-          <a href="{{ member.twitter }}" class="card-link"><img src="twitter.svg" height="20"></a>
+          <!-- <a href="{{ member.twitter }}" class="card-link"><img src="twitter.svg" height="20"></a> -->
+          <a href="{{ member.twitter }}">Twitter</a><br>
           {% endif %}
           {% if member.website %}
-          <a href="{{ member.website }}" class="card-link"><img src="website.svg" height="20"></a>
+          <!-- <a href="{{ member.website }}" class="card-link"><img src="website.svg" height="20"></a> -->
+          <a href="{{ member.website }}">Website</a>
           {% endif %}
         </div>
       </div>
     </div>
+    {% assign counter = counter | plus: 1 %}
     {% endfor %}
 
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <p>Total members = {{ counter }}</p>
+    </div>
   </div>
 
 </div>  <!-- end Main Content -->
