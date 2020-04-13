@@ -177,19 +177,17 @@
     {% assign counter = 0 %}
     {% for member in site.data.members %}
     <div class="col mb-3">
-      <div class="card">
+      <div class="card text-center border-0">
+        {% avatar user=member.github size=64 %}
         <div class="card-body">
           <h5 class="card-title">{{ member.name }}</h5>
           {% if member.github %}
-          <!-- <a href="{{ member.github }}" class="card-link"><img src="github.svg" height="20"></a> -->
-          <a href="{{ member.github }}">GitHub</a><br>
+          <a href="https://github.com/{{ member.github }}">GitHub</a><br>
           {% endif %}
           {% if member.twitter %}
-          <!-- <a href="{{ member.twitter }}" class="card-link"><img src="twitter.svg" height="20"></a> -->
-          <a href="{{ member.twitter }}">Twitter</a><br>
+          <a href="https://twitter.com/{{ member.twitter }}">Twitter</a><br>
           {% endif %}
           {% if member.website %}
-          <!-- <a href="{{ member.website }}" class="card-link"><img src="website.svg" height="20"></a> -->
           <a href="{{ member.website }}">Website</a>
           {% endif %}
         </div>

@@ -6,3 +6,6 @@ defaults:
       layout: "post"
 
 future: true
+
+plugins:
+  - jekyll-avatar

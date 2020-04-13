@@ -2,16 +2,16 @@
 # Optional fields = github, twitter, website
 
 - name: Gavin Wiggins
-  github: https://github.com/wigging
-  twitter: https://twitter.com/wigging
+  github: wigging
+  twitter: wigging
   website: https://gavinw.me
 
 - name: Mark Coletti
-  github: https://github.com/piprrr
-  twitter: https://twitter.com/piprrr
+  github: piprrr
+  twitter: piprrr
   website: https://www.researchgate.net/profile/Mark_Coletti
 
 - name: Alex Pawlowski
-  github: https://github.com/alexpawlowski
-  twitter: https://twitter.com/apawlows
+  github: alexpawlowski
+  twitter: apawlows
   website: https://me.apawlo.ws/
