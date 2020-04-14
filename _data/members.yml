@@ -1,8 +1,9 @@
 # Required field = name
-# Optional fields = github, twitter, website
+# Optional fields = github, keybase, twitter, website
 
 - name: Gavin Wiggins
   github: wigging
+  keybase: wigging
   twitter: wigging
   website: https://gavinw.me
 
@@ -13,5 +14,6 @@
 
 - name: Alex Pawlowski
   github: alexpawlowski
+  keybase: alexpawlowski
   twitter: apawlows
   website: https://me.apawlo.ws/

@@ -184,6 +184,9 @@
           {% if member.github %}
           <a href="https://github.com/{{ member.github }}">GitHub</a><br>
           {% endif %}
+          {% if member.keybase %}
+          <a href="https://keybase.io/{{ member.github }}">Keybase</a><br>
+          {% endif %}
           {% if member.twitter %}
           <a href="https://twitter.com/{{ member.twitter }}">Twitter</a><br>
           {% endif %}
@@ -200,7 +203,7 @@
 
   <div class="row">
     <div class="col">
-      <p>Total members = {{ counter }}</p>
+      <p>There are currently {{ counter }} KnoxPy members.</p>
     </div>
   </div>
 
